@@ -1,0 +1,30 @@
+Python variables and data Assignment Instructions
+What your programs have to do:
+	1.	The Rattus norvegicus PKC Beta-1 protein contains 671 amino acids. Given an average molecular weight of 110 Daltons per amino acid, write a Python program that calculates the estimated molecular weight of the protein (in kilodaltons) and writes the result on the screen. Just Hard-code in the protein sequence and assign to a variable, i.e., include only the sequence data. Hard-coding is requred in this assignment. Hard coding is not just related to the python language, it is a general practice in programming where you assign a constant value (here the protein sequence) and program refers to that value for processing.  Call your program: protein_to_daltons.py  Hint:  # to get rid of newline characters protein_sequence = protein_sequence.replace('\r', '').replace('\n', '')
+Output Example (note the blank line after calling the program before the output. Also you do not type the $, it's there to show you're running at the command line):  # the $ at the beginning of the commands below just note the use of the terminal, DO NOT TYPE $  $ python3 protein_to_daltons.py  The length of "Protein kinase C beta type" is: 671 The average weight of this protein sequence in kilodaltons is: 73.81
+	2.	Write a Python program that asks the user for a gene name and then asks the user for the number of nucleotides in its coding sequence. Your program should then calculate the number of amino acids in the resulting protein and its estimated molecular weight (in kilodaltons), again given an average molecular weight of 110 Daltons per amino acid. If the input is not divisible by three, it should not report a weight, but instead alert the user to the dna sequence is not divisible by 3. Call your program: input_to_amino_acids.py  (Remember: Each amino acid is coded by 3 nucleotides)  Output Examples (note the blank line after calling the program. Also you do not type the $, it's there to show you're running at the command line):  $ python3 input_to_amino_acids.py  Please enter a name for the DNA sequence: Test Your sequence name is: Test Please enter the length of the sequence: 9 The length of the DNA sequence is: 9.0 The length of the decoded protein is: 3.0 The average weight of the protein sequence is: 0.33  $ python3 input_to_amino_acids.py  Please enter a name for the DNA sequence: Test Your sequence name is: Test Please enter the length of the sequence: 1347 The length of the DNA sequence is: 1347.0 The length of the decoded protein is: 449.0 The average weight of the protein sequence is: 49.39  $ python3 input_to_amino_acids.py  Please enter a name for the DNA sequence: Test Your sequence name is: Test please enter the length of the sequence: 1346   Error: the DNA sequence is not a multiple of 3
+ Hint:  # to exit a program in python use sys.exit() import sys if something_bad:     print("\n\nError: the DNA sequence is not a multiple of 3", file=sys.stderr)  # print to STDERR     sys.exit(1)  # give it a non-zero exit value, since zero is considered "successful termination"   more on sys can be read here: https://docs.python.org/3/library/sys.html (Note, make sure to select the version of python you are using, sine thie will just default to the newest version of Python)
+	3.	Go back and rewrite the hard_coded_protocol.py program to get data from the user to dynamically change the results of the program. Call your program: input_to_protocol.py  Output Example (note the blank line after calling the program. Also you do not type the $, it's there to show you're running at the command line):  $ python3 input_to_protocol.py  Please enter the final volume of the solution (ml): 3 Please enter the NaCl stock (mM): 1000 Please enter the NaCl final (mM): 10 Please enter the MgCl2 stock (mM): 100 Please enter the MgCl2 final (mM): 0.5 Add 0.03 ml NaCl Add 0.015 ml MgCl2 Add water to a final volume of 3.0 ml and mix   
+Notes:
+	•	Grading Rubric for Assignment 1 is found here.
+	•	Remember, this course requires students use a Python version of 3.11 (3.11.5, 3.11.6, or 3.11.7) https://www.python.org/downloads/
+	•	Please submit your program by the Canvas due date. 
+	•	Follow the same submission requirements found on the Submissions page in Canvas.
+	•	Remember, using GitHub or Bitbucket is encouraged, but remember to make your repositories private. Failure to do so will result in a 0 for the assignment.
+	•	Make sure the names of your programs are identical to above or you will lose points.
+	•	When you are ready to submit to Canvas, we will zip the files. From the your Python project directory use the command line, and run:  zip assignment1.zip protein_to_daltons.py input_to_amino_acids.py input_to_protocol.py README.md.  
+	•	Submit the following file to Canvas: assignment1.zip
+	•	See Submissions page for more information on README.md.
+	•	You do not have to use functions for these programs, but the practice is good.
+	•	Use meaningful variables names
+	•	Use whitespace to make your code readable
+	•	Document your code with comments
+	•	Your output must look identical to the output provided above or you will lose points.
+	•	Install pylint version 2.17.7 with pip ($ pip3 install pylint==2.17.7) and then lint your code. Then try: pylint --max-line-length=120 protein_to_daltons.py
+	•	You can verify you have installed the correct version by doing the following command and checking the output: pylint --version
+·       pylint 2.17.7
+·       astroid 2.15.8
+·       Python 3.11.6 (main, Nov  2 2023, 04:39:40) [Clang 14.0.0 (clang-1400.0.29.202)]
+If you do not see that version, do a pip3 uninstall pylint and then reinstall with the command above.   
+	•	Your code must pass pylint. See the end of lecture 02 for more information. We will cover linting in lecture 03.
+ 

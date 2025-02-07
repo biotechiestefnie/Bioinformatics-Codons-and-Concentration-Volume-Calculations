@@ -1,0 +1,38 @@
+ """
+
+ File:  hard_coded_protocol.py
+ Author: Chesley Leslin
+
+ Instruct user how to prepare a 3 ml solution of
+ 10 mM NaCl and 0.5 mM MgCl2, given stock solutions
+ of 1 M NaCl and 0.1 M MgCl2.
+ """
+
+
+ def main():
+     """Business logic"""
+
+     final_vol = 3  # use ml volumes throughout the program
+
+     # NaCl
+     nacl_stock = 1000  # use mM concentrations throughout the program
+     nacl_final = 10
+
+     # concatenation, notice how we are calculating something here!
+     step1 = f"Add {str(final_vol * (nacl_final / nacl_stock))} ml NaCl\n"
+
+     # MgCl2
+     mg_stock = 100
+     mg_final = 0.5
+
+     step2 = f"Add {str(final_vol * (mg_final / mg_stock))} ml MgCl2\n"
+
+     # Water
+     step3 = f"Add water to a final volume of {str(final_vol)} ml and mix"
+
+     # Protocol, we can then just print things out b/c they have been formatted earlier
+     print(step1 + step2 + step3)
+
+
+ if __name__ == '__main__':
+     main()
