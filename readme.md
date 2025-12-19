@@ -2,7 +2,7 @@
 
 ## Description
 
-As the first evaluation in Bioinf6200 for writing scripts and executable programs in Python, emphasis is on adherence to style guidelines as delineated by pep8, with particular focus on appropriate use of whitespace, indentation, and documentation. The programs are written within Pycharm using Python 3.11 and Pylint 2.17.7. 
+As the first evaluation for writing scripts and executable programs in Python, emphasis is on adherence to style guidelines as delineated by pep8, with particular focus on appropriate use of whitespace, indentation, and documentation. The programs are written within Pycharm using Python 3.11 and Pylint 2.17.7. 
 
 In the first module, **protein_to_daltons.py**, the *R. norvegicus* analog of protein PKC beta-1 is hardcoded (as instructed) into the program. The sequence was extracted from NCBI and stripped of newline characters. This program calculates the estimated molecular weight of PKC beta-1 in kilodaltons, given 1 amino acid is an average of 110 daltons. The result of this calculation is then written to the screen.  
 
