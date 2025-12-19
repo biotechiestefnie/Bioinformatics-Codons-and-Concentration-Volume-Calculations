@@ -4,11 +4,12 @@
 
 As the first evaluation in Bioinf6200 for writing scripts and executable programs in Python, emphasis is on adherence to style guidelines as delineated by pep8, with particular focus on appropriate use of whitespace, indentation, and documentation. The programs are written within Pycharm using Python 3.11 and Pylint 2.17.7. 
 
-In the first program, **protein_to_daltons.py**, the *R. norvegicus* analog of protein PKC beta-1 is hardcoded (as instructed) into the program. The sequence was extracted from NCBI and stripped of newline characters. This program calculates the estimated molecular weight of PKC beta-1 in kilodaltons, given 1 amino acid is an average of 110 daltons. The result of this calculation is then written to the screen.  
+In the first module, **protein_to_daltons.py**, the *R. norvegicus* analog of protein PKC beta-1 is hardcoded (as instructed) into the program. The sequence was extracted from NCBI and stripped of newline characters. This program calculates the estimated molecular weight of PKC beta-1 in kilodaltons, given 1 amino acid is an average of 110 daltons. The result of this calculation is then written to the screen.  
 
-The second program, **input_to_amino_acids.py**, is an interactive program that asks the user for the name of a gene and the number of nucleotides in that gene. Upon each input, the program returns a confirmatory statement to the screen stating the name of the gene and the number of nucleotides. Then the program uses the number of nucleotides input by the user to calculate the number of amino acids that are in the translated protein sequence of that gene, as well as the molecular weight of the protein in kilodaltons, given 1 amino acid == 3 nucleotides, and 1 amino acid == approximately 110 daltons. If the user inputs a gene that has a nucleotide length not divisible by three, the program does not return a molecular weight, but rather, returns an error message stating "The sequence is not divisible by three!". Otherwise, the number of amino acids and molecular weight should be printed to the screen as statements below those of the gene name and number of nucleotides in the DNA sequence.
+The second module, **input_to_amino_acids.py**, is an interactive program that asks the user for the name of a gene and the number of nucleotides in that gene. Upon each input, a confirmation statement on the screen stating the name of the gene and the number of nucleotides. The number of nucleotides input by the user is applied to calculate the number of amino acids that are in the translated protein sequence of that gene, as well as the molecular weight of the protein in kilodaltons, given 1 amino acid == 3 nucleotides, and 1 amino acid == approximately 110 daltons. If the user inputs a gene that has a nucleotide length not divisible by three, the program does not return a molecular weight, but rather, returns an error message stating "The sequence is not divisible by three!". Otherwise, the number of amino acids and molecular weight should be printed to the screen as statements below those of the gene name and number of nucleotides in the DNA sequence.
 
-The third program, **input_to_protocol.py**, is a rewrite of the provided script converting it into an interactive program that supplies the user with instructions for making a solution of sodium chloride (NaCl) and magnesium chloride (MgCl2) of desired final volume and concentrations. The program first asks the user to input the number of mililiters desired for the final solution, as well as the stock and final concentrations of both chemicals to be added- NaCl and MgCl2. The program then uses those input values to calculate the volume of each chemical that is required to produce a solution with the given input parameters based on the dilution theorem, C1V1 == C2V2, where C1 is the stock concentration, C2 is the final concentration, V2 is the final solution volume in milliliters, and the program solves for the input volume for each of the chemicals. The final solution volume, stock and final concentrations of each chemical, and the calculated volume of each chemical required to yield a solution based on the input parameters are then displayed on the screen for the user to reference to make their solution.  
+The third module, **input_to_protocol.py**, is a rewrite of the provided script converting it into an interactive program that supplies the user with instructions for making a solution of sodium chloride (NaCl) and magnesium chloride (MgCl2) of desired final volume and concentrations. The program first asks the user to input the number of mililiters wanted for the final solution, as well as the stock and final concentrations of both chemicals to be added- NaCl and MgCl2. The program then uses those input values to calculate the volume of each chemical that is required to produce a solution with the given input parameters based on the dilution theorem, C1V1 == C2V2, where C1 is the stock concentration, C2 is the final concentration, V2 is the final solution volume in milliliters, and the program solves for the input volume for each of the chemicals. The final solution volume, stock and final concentrations of each chemical, and the calculated volume of each chemical required to yield a solution based on the input parameters are then displayed on the screen for the user to reference to make their solution.  
+
 ## Getting Started
 
 ### Dependencies
@@ -25,7 +26,8 @@ The third program, **input_to_protocol.py**, is a rewrite of the provided script
 * The protocol script which was converted to an interactive program in **input_to_protocol.py** was supplied by the instructor for the assignment, and I have included the original protocol script in the auxillary file **protocol_AUXILLARY_FILE.txt** for reference.
 
 
-* The programs are designed to be run from the terminal of the user's OS. While written on macOS, the programs are basic enough to easily run on Windows or Linux as well.
+* The programs are designed to be run from the terminal of the user's operating system (OS).
+* While written on macOS, the programs are basic enough to easily run on Windows or Linux as well.
 
 
 * Scripts were written on PyCharm IDE version 2024.3.1.1
@@ -41,7 +43,8 @@ The third program, **input_to_protocol.py**, is a rewrite of the provided script
    * On Linux: Use the command 'unzip **Assignment_1.zip**' in the terminal.
 
 
-3. Ensure that the all 3 programs (**protein_to_daltons.py**, **input_to_amino_acids.py**, **input_to_protocol.py**) are present in the extracted project directory.
+3. Ensure that the all 3 programs (**protein_to_daltons.py**, **input_to_amino_acids.py**,
+   **input_to_protocol.py**) are present in the extracted project directory.
 
 
 ### Executing the programs
@@ -118,16 +121,11 @@ moreno.st@northeastern.edu
 
 [https://github.com/biotechiestefnie]
 
-!!! **protocol_AUXILLARY_FILE.txt**, which is the hardcoded protocol that was converted to an interactive program in **input_to_protocol.py**, was written and provided by Dr. Chelsey Leslin of Northeastern University.
 
 ## Version History
 
 * 0.1
     * Initial Release
-
-## License
-
-This project is private due to Northeastern University copyright requisites. These programs may not be shared, published, copied, or used without the expressed consent of both Stefanie Moreno and Northeastern University. Please contact Stefanie Moreno for further details.
 
 ## Acknowledgments
 
